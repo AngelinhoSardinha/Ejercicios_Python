@@ -9,9 +9,11 @@ def calculo_agua(litros):
              return litros * 0.1
      else:
              return litros * 0.3
+
 litros = int(input('¿Cuantos litros ha consumido?\n'))
 ¿Cuantos litros ha consumido?
 14
+
 print(calculo_agua(litros))
 6
 
