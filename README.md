@@ -21,6 +21,7 @@ print(calculo_agua(litros))
 ## Ejercicio_2
 
 def menu():
+
      print(""" Escoge el billete que quieres:
              1.- Billet senzill
              2.- TCasual
@@ -32,6 +33,7 @@ def menu():
      seleccion_zona(opcion)
 	 
 def seleccion_zona(opcion):
+
 	precio_total = 0
 	match opcion:
 		case 1:
@@ -100,6 +102,7 @@ def seleccion_zona(opcion):
 			menu()
    
 def pago(precio_total):
+
     print(f"Debes pagar {precio_total:.2f} €")
     precio_nuevo = precio_total
     billetes_validos = [0.01, 0.05, 0.10, 0.20, 0.50,
