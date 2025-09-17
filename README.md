@@ -3,6 +3,7 @@
 ## Ejercicio_1
 
 def calculo_agua(litros):
+
      if litros < 50:
              return 6
      elif litros >= 50 and litros <= 200:
@@ -20,6 +21,7 @@ print(calculo_agua(litros))
 ## Ejercicio_2
 
 def menu():
+
      print(""" Escoge el billete que quieres:
              1.- Billet senzill
              2.- TCasual
@@ -27,12 +29,16 @@ def menu():
              4.- TTrimestre
              5.- TJove
              6.- Salir """)
+			 
      opcion = int(input('Selecciona el numero de la opcion que quieras\n'))
      seleccion_zona(opcion)
-
+	 
 def seleccion_zona(opcion):
+
 	precio_total = 0
+ 
 	match opcion:
+ 
 		case 1:
 			zona = int(input('seleccione la zona\n'))
 			if zona == 1:
@@ -45,7 +51,7 @@ def seleccion_zona(opcion):
 				print("zona no valida")
 				return
 			pago(precio_total) 
-		
+   
 	     case 2:
 			zona = int(input('seleccione la zona\n'))
 			if zona == 1:
@@ -58,6 +64,7 @@ def seleccion_zona(opcion):
 				print("zona no valida")
 				return
 			pago(precio_total)
+   
 		case 3: 
 			zona = int(input('seleccione la zona\n'))
 			if zona == 1:
@@ -70,6 +77,7 @@ def seleccion_zona(opcion):
 				print("zona no valida")
 				return 
 			pago(precio_total)
+   
 		case 4: 
 			zona = int(input('seleccione la zona\n'))
 			if zona == 1:
@@ -82,6 +90,7 @@ def seleccion_zona(opcion):
 				print("zona no valida")
 				return
 			pago(precio_total)
+   
 		case 5:
 			zona = int(input('seleccione la zona\n'))
 			if zona == 1:
@@ -94,13 +103,15 @@ def seleccion_zona(opcion):
 				print("zona no valida")
 				return
 			pago(precio_total) 
+   
 		case 6:
 			print("saliendo...")
+   
 		case _:
 			menu()
-
-
+   
 def pago(precio_total):
+
     print(f"Debes pagar {precio_total:.2f} €")
     precio_nuevo = precio_total
 
