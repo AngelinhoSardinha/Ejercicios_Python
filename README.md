@@ -126,14 +126,14 @@ def pago(precio_total):
             precio_nuevo -= money
             if precio_nuevo > 0:
                 print(f"Faltan {precio_nuevo:.2f} €")
-            elif precio_nuevo < 0:
-                print(f"Pago completo, tu cambio es {abs(precio_nuevo):.2f} €")
-                break
-            else:
-                print("Pago completo, gracias por tu compra")
-                break
         else:
             print("El billete/moneda no es válido")
+
+    # cuando el while termina, es porque precio_nuevo <= 0
+    if precio_nuevo == 0:
+        print("Pago completo, gracias por tu compra")
+    else:
+        print(f"Pago completo, tu cambio es {abs(precio_nuevo):.2f} €")
 
     menu()  
 
