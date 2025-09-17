@@ -53,7 +53,7 @@ def seleccion_zona(opcion):
 			pago(precio_total) 
    
 	     case 2:
-			zona = int(input('seleccione la zona\n'))
+			zona = int(input('seleccione la zona 1, 2 o 3\n'))
 			if zona == 1:
 				precio_total = 10.20 * 1
 			elif zona == 2:
@@ -66,7 +66,7 @@ def seleccion_zona(opcion):
 			pago(precio_total)
    
 		case 3: 
-			zona = int(input('seleccione la zona\n'))
+			zona = int(input('seleccione la zona 1, 2 o 3\n'))
 			if zona == 1:
 				precio_total = 54.00 * 1
 			elif zona == 2:
@@ -79,7 +79,7 @@ def seleccion_zona(opcion):
 			pago(precio_total)
    
 		case 4: 
-			zona = int(input('seleccione la zona\n'))
+			zona = int(input('seleccione la zona 1, 2 o 3\n'))
 			if zona == 1:
 				precio_total = 145.30 * 1
 			elif zona == 2:
@@ -92,7 +92,7 @@ def seleccion_zona(opcion):
 			pago(precio_total)
    
 		case 5:
-			zona = int(input('seleccione la zona\n'))
+			zona = int(input('seleccione la zona 1, 2 o 3\n'))
 			if zona == 1:
 				precio_total = 105.00 * 1
 			elif zona == 2:
