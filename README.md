@@ -169,3 +169,19 @@ def fibonacci_por_rango(rango_1, rango_2):
 
 ## Ejercicio_5
 
+def mostrar_tablero():
+
+    filas = 8
+    columnas = 8
+    tablero = [['' for _ in range(columnas)] for _ in range(filas)]
+
+    for i in range(filas):
+        for j in range(columnas):
+            if (i  + j)%2 == 0:
+                tablero[i][j] = 'O'
+            else:
+                tablero[i][j] = 'X'
+    print("Welcome to mi tablero de ajedrez xd")
+    for i in range(filas):
+        print(' '.join(tablero[i]), str(filas - i))
+    print('A B C D E F G H')
