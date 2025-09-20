@@ -128,6 +128,44 @@ def pago(precio_total):
 
 ## Ejercicio_4
 
+def fibonacci(cantidad):
+
+    a, b = 1, 1  
+    for i in range(cantidad):
+        print(a, end=' ')
+        a, b = b, a + b
+
+def menu():
+
+    opcion = int(input(print(""" Selecciona tu opcion (1 o 2)
+              1.- Visualizar los n primero numeros de fibonacci.
+              2.- Visualizar en un rango dado por ti\n""")))
+    
+    seleccion_de_metodo(opcion)
+
+def seleccion_de_metodo(opcion):
+
+    match opcion:
+        case 1:
+            cantidad = int(input("Diga un numero n para calcular los n primeros numeros de fobonacci:\n"))
+            fibonacci(cantidad)
+        case 2:
+            rango_1 = int(input("Seleccione desde donde quiere empezar el calculo:\n"))
+            rango_2 = int(input("Seleccione el rango 2, que es en donde quiere termiar la serie:\n"))
+            fibonacci_por_rango(rango_1, rango_2)
+        case _:
+            print("NO ES UNA OPCION VALIDA")
+            menu()
+
+def fibonacci_por_rango(rango_1, rango_2):
+
+    a, b = 1, 1
+    contador = 0  
+    while contador < rango_2:  
+        if a >= rango_1:  
+            print(a, end=' ')
+        a, b = b, a + b
+        contador += 1 
 
 ## Ejercicio_5
 
