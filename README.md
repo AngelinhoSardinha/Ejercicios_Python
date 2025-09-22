@@ -125,6 +125,56 @@ def pago(precio_total):
 
 ## Ejercicio_3
 
+import os
+import re
+
+def menu():
+
+    print("""
+    === RENOMBRADOR DE ARCHIVOS ===
+    1.- Empezar a renombrar
+    2.- Salir
+    """)
+    opcion = int(input("Selecciona una opción: "))
+    if opcion == 1:
+        pedir_datos()
+    elif opcion == 2:
+        print("Saliendo...")
+    else:
+        print("Opción no válida")
+        menu()
+
+def pedir_datos():
+
+    ruta = input("Introduce la ruta del directorio: ").strip()
+
+    if not os.path.isdir(ruta):
+        print("Error: la carpeta no existe.")
+        menu()
+        return
+
+    texto_buscar = input("Introduce el texto a buscar (puede ser regex): ").strip()
+    reemplazo = input("Introduce el texto de reemplazo: ").strip()
+
+    renombrar(ruta, texto_buscar, reemplazo)
+
+def renombrar(ruta, texto_buscar, reemplazo):
+
+    for archivo in os.listdir(ruta):
+        ruta_completa = os.path.join(ruta, archivo)
+
+        if os.path.isfile(ruta_completa):
+            nuevo_nombre = re.sub(texto_buscar, reemplazo, archivo)
+
+            if nuevo_nombre != archivo:
+                nueva_ruta = os.path.join(ruta, nuevo_nombre)
+                os.rename(ruta_completa, nueva_ruta)
+                print(f"{archivo} → {nuevo_nombre}")
+
+    print("Proceso terminado.")
+    menu()
+
+menu()
 
 ## Ejercicio_4
 
